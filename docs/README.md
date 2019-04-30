@@ -204,3 +204,12 @@ $.ajax({
   msg: '用户名或者密码错误'
 }
 ```
+
+当前可以用的用户名密码：
+
+用户名|密码|是否是老师
+---|---|---
+ngr|aicoder|否
+wyd|aicoder|是
+admin|aicoder|是
+admin1|aicoder|是
