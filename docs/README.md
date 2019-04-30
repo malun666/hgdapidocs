@@ -213,3 +213,141 @@ ngr|aicoder.com|否
 wyd|aicoder.com|是
 admin|aicoder.com|是
 admin1|aicoder.com|是
+
+## 学生端接口
+
+### 获取轮播图接口
+
+学生端首页显示的轮播图列表
+
+| 类型   | 说明                                                   |
+|------|------------------------------------------------------|
+| 接口地址 | `http://192.168.1.130:8888/api/student/carousel` |
+| 请求方式 | `GET`                                               |
+| 数据类型 | `application/x-www-form-urlencoded`                                   |
+| 特殊要求 | 携带登录后得到的token，不然会返回没有登录的消息 httpcode： 401             |
+
+#### 请求参数
+
+无
+
+#### 返回值
+
+| 序号  | 字段    | 类型     | 说明                |
+|-----|-------|--------|-------------------|
+| 1   | user  | Object | 登陆成功的用户对象信息       |
+| 2   | code  | Number | 登陆成功的编码，1成功， 0失败。 |
+| 3   | token | String | token密钥。          |
+| 4   | msg   | String | 消息内容。             |
+
+> 登录成功后续请求都需要添加token密钥到header的Authorization中。
+
+用户对象类型
+
+| 属性            | 类型       | 参考值                      | 说明     |
+|---------------|----------|--------------------------|--------|
+| order           | Number | 1 | 排序     |
+| title          | String   |     美丽景色                  | 轮播图标题    |
+| imgUrl        | String   | /a/b.png                 | 图片地址     |
+| url         | String   | /home/a.html                       | 跳转地址    |
+
+#### 返回实例
+
+```js
+// 登录成功消息
+[
+    {
+        "order": 1,
+        "title": "美丽景色",
+        "imgUrl": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555293675&di=a807c0f74255accb5380165976293a84&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01398c5942618ca8012193a3f97976.jpg",
+        "url": "http://www.aicoder.com"
+    },
+    {
+        "order": 2,
+        "title": "美丽景色1",
+        "imgUrl": "http://www.33lc.com/article/UploadPic/2012-10/2012101714102663437.jpg",
+        "url": "/login.html"
+    },
+    {
+        "order": 3,
+        "title": "美丽景色2",
+        "imgUrl": "http://www.33lc.com/article/UploadPic/2012-10/2012101714103954400.jpg",
+        "url": "/"
+    }
+]
+
+// 未登录，返回失败消息，状态码是401
+{
+  code: 8,
+  msg: '用户没有登录，不能访问'
+}
+```
+
+## 教师端接口
+
+### 获取轮播图接口
+
+学生端首页显示的轮播图列表
+
+| 类型   | 说明                                                   |
+|------|------------------------------------------------------|
+| 接口地址 | `http://192.168.1.130:8888/api/teacher/carousel` |
+| 请求方式 | `GET`                                               |
+| 数据类型 | `application/x-www-form-urlencoded`                                   |
+| 特殊要求 | 携带登录后得到的token，不然会返回没有登录的消息 httpcode： 401             |
+
+#### 请求参数
+
+无
+
+#### 返回值
+
+| 序号  | 字段    | 类型     | 说明                |
+|-----|-------|--------|-------------------|
+| 1   | user  | Object | 登陆成功的用户对象信息       |
+| 2   | code  | Number | 登陆成功的编码，1成功， 0失败。 |
+| 3   | token | String | token密钥。          |
+| 4   | msg   | String | 消息内容。             |
+
+> 登录成功后续请求都需要添加token密钥到header的Authorization中。
+
+用户对象类型
+
+| 属性            | 类型       | 参考值                      | 说明     |
+|---------------|----------|--------------------------|--------|
+| order           | Number | 1 | 排序     |
+| title          | String   |     美丽景色                  | 轮播图标题    |
+| imgUrl        | String   | /a/b.png                 | 图片地址     |
+| url         | String   | /home/a.html                       | 跳转地址    |
+
+#### 返回实例
+
+```js
+// 登录成功消息
+[
+    {
+        "order": 1,
+        "title": "美丽景色",
+        "imgUrl": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555293675&di=a807c0f74255accb5380165976293a84&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01398c5942618ca8012193a3f97976.jpg",
+        "url": "http://www.aicoder.com"
+    },
+    {
+        "order": 2,
+        "title": "美丽景色1",
+        "imgUrl": "http://www.33lc.com/article/UploadPic/2012-10/2012101714102663437.jpg",
+        "url": "/login.html"
+    },
+    {
+        "order": 3,
+        "title": "美丽景色2",
+        "imgUrl": "http://www.33lc.com/article/UploadPic/2012-10/2012101714103954400.jpg",
+        "url": "/"
+    }
+]
+
+// 未登录，返回失败消息，状态码是401
+{
+  code: 8,
+  msg: '用户没有登录，不能访问'
+}
+```
