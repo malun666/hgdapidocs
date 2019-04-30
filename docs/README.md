@@ -209,7 +209,7 @@ $.ajax({
 
 用户名|密码|是否是老师
 ---|---|---
-ngr|aicoder|否
-wyd|aicoder|是
-admin|aicoder|是
-admin1|aicoder|是
+ngr|aicoder.com|否
+wyd|aicoder.com|是
+admin|aicoder.com|是
+admin1|aicoder.com|是
