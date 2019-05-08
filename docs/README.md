@@ -129,6 +129,20 @@ $.ajax({
 });
 ```
 
+## 验证码地址
+
+地址：http://192.168.1.130:8888/api/code
+
+后台返回 svg的内容。
+
+前端使用：
+
+```html
+<embed src="http://192.168.1.130:8888/api/code" type="image/svg+xml" />
+或者图片
+<img src="http://192.168.1.130:8888/api/code" alt="Breaking Borders Logo" height="65" width="68">
+```
+
 ## 登陆相关
 
 ### 登陆获取token
