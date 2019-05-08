@@ -143,6 +143,22 @@ $.ajax({
 <img src="http://192.168.1.130:8888/api/code" alt="Breaking Borders Logo" height="65" width="68">
 ```
 
+## 文件上传
+
+文件上传限制文件大小： 2M
+
+上传地址： `http://192.168.1.130:8888/api/upload`
+
+上传图片后，返回内容：
+
+```js
+{ img: `图片地址` }
+// 例如：
+{ img: '/server/upload/a.png'}
+```
+
+> 后台图片存放在192.168.1.130服务器上。
+
 ## 登陆相关
 
 ### 登陆获取token
