@@ -349,7 +349,7 @@ admin1|aicoder.com|是
 | 数据类型 | `application/x-www-form-urlencoded`                                   |
 | 特殊要求 | 携带登录后得到的token，不然会返回没有登录的消息 httpcode： 401             |
 
-#### 请求参数
+#### 轮播图请求参数
 
 无
 
